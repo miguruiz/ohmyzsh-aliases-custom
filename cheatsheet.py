@@ -1,8 +1,12 @@
+# Copied an adapted from https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
 #!/usr/bin/env python3
 import sys
 import itertools
 import termcolor
 import argparse
+import yaml
+from pathlib import Path
+
 
 def parse(line):
     left = line[0:line.find('=')].strip()
@@ -13,6 +17,16 @@ def parse(line):
         cmd = right
     return (left, right, cmd)
 
+def addEspanso():
+    p = str(Path.home())+"/Library/Application Support/espanso/match/base.yml"
+    with open(p, 'r') as file:
+        yaml_data = yaml.safe_load(file)
+    esp = []
+    for i in yaml_data['matches']:
+        esp.append(i['trigger'] + '=' + 'espanso | ' + i['replace'])
+    return esp
+    
+    ...
 def cheatsheet(lines):
     exps = [ parse(line) for line in lines ]
     exps.sort(key=lambda exp:exp[2])
@@ -64,6 +78,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     lines = sys.stdin.readlines()
+    
     group_list = args.group_list or None
     wfilter = " ".join(args.filter) or None
-    pretty_print(cheatsheet(lines), wfilter, group_list, args.groups_only)
+    pretty_print(cheatsheet(lines + addEspanso()), wfilter, group_list, args.groups_only)

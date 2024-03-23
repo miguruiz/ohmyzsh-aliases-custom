@@ -1,17 +1,21 @@
+# Custom Aliases
+
+This is a copy of ohmyzsh plugin [@aliases](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases) with additional customization for displaying espanso text expander shorcuts and adding some aliases.
+
 # Aliases cheatsheet
-
-**Maintainer:** [@hqingyi](https://github.com/hqingyi)
-
-With lots of 3rd-party amazing aliases installed, this plugin helps list the shortcuts
-that are currently available based on the plugins you have enabled.
 
 To use it, add `aliases` to the plugins array in your zshrc file:
 
+git clone https://github.com/txstc55/dogesay ~/.oh-my-zsh/plugins/dogesay
+
+
 ```zsh
-plugins=(aliases)
+plugins=(... espanso-and-aliases)
 ```
 
-Requirements: Python needs to be installed.
+Requirements: 
+- Python needs to be installed.
+- [Espanso](https://espanso.org/) 
 
 ## Usage
 
@@ -26,3 +30,6 @@ Requirements: Python needs to be installed.
 - `als --groups`: show only group names
 
   ![screenshot](https://github.com/ohmyzsh/ohmyzsh/assets/66907184/5bfa00ea-5fc3-4e97-8b22-2f74f6b948c7)
+
+  ## TODO
+  - `make espanso optional`

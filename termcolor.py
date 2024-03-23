@@ -19,7 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Author: Konstantin Lepa <konstantin.lepa@gmail.com>
+# Original Author: Konstantin Lepa <konstantin.lepa@gmail.com>
 
 """ANSI Color formatting for output in terminal."""
 
