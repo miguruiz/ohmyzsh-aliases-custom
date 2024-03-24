@@ -6,7 +6,7 @@ This is a copy of ohmyzsh plugin [@aliases](https://github.com/ohmyzsh/ohmyzsh/t
 
 To use it:
 
-1. git clone https://github.com/miguruiz/ohmyzsh-espanso-and-aliases.git ~/.oh-my-zsh/plugins/espanso-and-aliases
+1. git clone https://github.com/miguruiz/ohmyzsh-espanso-and-aliases.git $ZSH_CUSTOM/plugins/espanso-and-aliases
 2. add `espanso-and-aliases` to the plugins array in your zshrc file:
 ```zsh
 plugins=(... espanso-and-aliases)
