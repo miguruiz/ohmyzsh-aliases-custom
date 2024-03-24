@@ -1,14 +1,13 @@
-# Custom Aliases
+# espanso-and-aliases plugin
 
 This is a copy of ohmyzsh plugin [@aliases](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases) with additional customization for displaying espanso text expander shorcuts and adding some aliases.
 
 # Aliases cheatsheet
 
-To use it, add `aliases` to the plugins array in your zshrc file:
+To use it:
 
-git clone https://github.com/txstc55/dogesay ~/.oh-my-zsh/plugins/dogesay
-
-
+1. git clone https://github.com/miguruiz/ohmyzsh-espanso-and-aliases.git ~/.oh-my-zsh/plugins/espanso-and-aliases
+2. add `espanso-and-aliases` to the plugins array in your zshrc file:
 ```zsh
 plugins=(... espanso-and-aliases)
 ```
