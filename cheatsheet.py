@@ -24,7 +24,7 @@ def addEspanso():
     esp = []
     for i in yaml_data['matches']:
         esp.append(i['trigger'] + '=' + 'espanso | ' + i['replace'])
-    return esp
+    return sorted(esp)
     
     ...
 def cheatsheet(lines):
